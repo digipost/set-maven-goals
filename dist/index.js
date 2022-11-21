@@ -9693,8 +9693,7 @@ const REF_REGEX = /refs\/(.+)\/(.+)/; // e.g. 'refs/heads/main' or 'refs/tags/12
 try {
 
   const ref = github.context.ref;
-  const commitMsg = github.event.head_commit.message;
-  console.log(`Reference is ${ref}, commit message is ${commitMsg}`);
+  console.log(`Reference is ${ref}`);
 
   const [, refType, branch] = ref.match(REF_REGEX);
   const isDefaultBranch = DEFAULT_BRANCHES.includes(branch);
@@ -9719,7 +9718,7 @@ try {
     goals = 'clean verify';
   }
 
-  if (isTag || (!isDefaultBranch && commitMsg.startsWith('[skip tests]'))) {
+  if (isTag) {
     goals = "-Dmaven.test.skip.exec " + goals;
   }
 
