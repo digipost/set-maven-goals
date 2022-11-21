@@ -1,0 +1,17 @@
+name: 'Set Maven Goals'
+description: 'Exports a MVN_GOALS environment variable based on combination of input variables'
+inputs:
+  acr:
+    description: True if the app deploys docker images to Azure Container Registry, otherwise false
+    required: false
+    default: 'false'
+  gpr:
+    description: True if the app deploys JARs to Github Package Registry using deploy, otherwise false
+    required: false
+    default: 'false'
+outputs:
+  maven-goals:
+    description: 'The value of the maven goal variable'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
