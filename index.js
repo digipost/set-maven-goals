@@ -16,7 +16,7 @@ try {
 
   const deployToACR = core.getInput('acr') === 'true';
   const deployToGPR = core.getInput('gpr') === 'true';
-  console.log(`Deploy to ACR: ${acr}, deploy to GPR: ${gpr}`)
+  console.log(`Deploy to ACR: ${deployToACR}, deploy to GPR: ${deployToGPR}`)
 
   let goals;
   if (isDefaultBranch) {
