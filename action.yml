@@ -3,11 +3,11 @@ description: 'Exports a MVN_GOALS environment variable based on combination of i
 inputs:
   acr:
     description: True if the app deploys docker images to Azure Container Registry, otherwise false
-    required: false
+    required: true
     default: 'false'
   gpr:
     description: True if the app deploys JARs to Github Package Registry using deploy, otherwise false
-    required: false
+    required: true
     default: 'false'
 outputs:
   maven-goals:
