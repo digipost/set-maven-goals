@@ -11,11 +11,11 @@ Our specification, in short, is as follows:
 
 ## Inputs
 
-### acr
+### deploy-to-acr
 
 True if the application deploys docker images to Azure Container Registry using Jib, otherwise false.
 
-### gpr
+### deploy-to-acr
 
 True if the application deploys JARs to Github Package Registry, otherwise false.
 

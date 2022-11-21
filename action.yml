@@ -1,11 +1,11 @@
 name: 'Set Maven Goals'
 description: 'Exports a MVN_GOALS environment variable based on combination of input variables'
 inputs:
-  acr:
-    description: True if the app deploys docker images to Azure Container Registry, otherwise false
+  deploy-to-acr:
+    description: True if the app deploys docker images to Azure Container Registry using Jib, otherwise false
     required: true
     default: 'false'
-  gpr:
+  deploy-to-gpr:
     description: True if the app deploys JARs to Github Package Registry using deploy, otherwise false
     required: true
     default: 'false'

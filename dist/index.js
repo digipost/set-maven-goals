@@ -9700,8 +9700,8 @@ try {
   const isTag = ref.startsWith('refs/tags');
   console.log(`Branch is ${branch}, refType is ${refType}. isTag=${isTag}, isDefaultBranch=${isDefaultBranch}`);
 
-  const deployToACR = core.getInput('acr') === 'true';
-  const deployToGPR = core.getInput('gpr') === 'true';
+  const deployToACR = core.getInput('deploy-to-acr') === 'true';
+  const deployToGPR = core.getInput('deploy-to-gpr') === 'true';
   console.log(`Deploy to ACR: ${deployToACR}, deploy to GPR: ${deployToGPR}`)
 
   let goals;
