@@ -29,7 +29,7 @@ This value is also exported in the Github Environment as `MVN_GOALS`.
 ## Example usage
 
 ```yaml
-uses: digipost/set-maven-goals@v1.0
+uses: digipost/set-maven-goals@v2.0
 ```
 
 ## Building this project
